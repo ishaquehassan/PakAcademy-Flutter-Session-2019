@@ -2,6 +2,9 @@ main() {
   Person p = Student();
   p.sleep();
   p.hello();
+
+  dynamic a = Student();
+  a.hello();
 }
 
 abstract class Person{
@@ -12,7 +15,9 @@ abstract class Person{
   hello();
 }
 
-class Hello{}
+class Hello{
+
+}
 
 class Student extends Person{
   sleep(){
@@ -22,6 +27,6 @@ class Student extends Person{
   hello() {
 
   }
-  
+
   //world();
 }
