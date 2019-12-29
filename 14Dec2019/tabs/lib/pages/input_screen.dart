@@ -5,10 +5,9 @@ typedef OnText(String text,String password);
 class InputScreen extends StatelessWidget {
   TextEditingController controllerUser;
   TextEditingController controllerPass;
+
   String defaultText;
   OnText onText;
-
-
   InputScreen(this.defaultText, this.onText);
 
   @override

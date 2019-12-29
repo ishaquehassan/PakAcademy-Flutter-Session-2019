@@ -33,7 +33,12 @@ class _HomeState extends State<Home> {
             RaisedButton(
               child: Text('Home'),
               onPressed: (){
-                navigate(context,InputScreen(text,onText));
+                navigate(context,InputScreen(text,(str1,str2){
+                  setState(() {
+                    this.text = str1;
+                    this.text2 = str2;
+                  });
+                }));
               },
             ),
             RaisedButton(
@@ -49,9 +54,6 @@ class _HomeState extends State<Home> {
   }
 
   onText(String text,String password){
-    setState(() {
-      this.text = text;
-      this.text2 = password;
-    });
+
   }
 }
