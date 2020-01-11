@@ -20,6 +20,7 @@ class _ListDataState extends State<ListData> {
 
   loadData() {
     var contactsRef = FirebaseDatabase.instance.reference().child("contacts");
+
     contactsRef.onChildAdded.listen((event) {
       Contact contact =
           Contact.fromJson(Map<String, dynamic>.from(event.snapshot.value));
